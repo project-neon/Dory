@@ -75,8 +75,10 @@ A ideia de colocá-los na frente é impedir que o robô saia da arena por conta 
 |---|
 |  11/09 |  
  - Códigos para teste
+
     1.Motores
-    3.Sensores
+    2.Sensores
+   
 (Possível que não precise pois os testes já estão feitos, dá pra puxar das tarefas da semana que vem se for mesmo o caso)
 
 - Começar o código para Rádio Controlável, estender pras outras semanas conforme for necessário
