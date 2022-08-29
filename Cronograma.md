@@ -48,14 +48,14 @@ A ideia de colocá-los na frente é impedir que o robô saia da arena por conta 
     4.1 Motores
     4.2 Movimentos para frente/trás
     4.3 Sensores
-5. Estudar a forma/valores que os sensores estão passando para nós
+5. Fazer o código para Rádio Controlável
+6. Estudar a forma/valores que os sensores estão passando para nós
     5.1 Como funciona quando está perto da borda?
     5.2 Até que distância pega bem, até que distância pega mal
-6. Aplicar as estratégias escolhidas
+7. Aplicar as estratégias escolhidas
     6.1 -  Teste das estratégias separadamente
     6.2 - Afinal, rola ou n rola segmantar o código?
-7. Fazer a documentação (+ final)
-8. Fazer o código para Rádio Controlável
+8. Fazer a documentação (+ final)
 
 | Semana  | 
 |---|
@@ -78,6 +78,8 @@ A ideia de colocá-los na frente é impedir que o robô saia da arena por conta 
     1.Motores
     3.Sensores
 (Possível que não precise pois os testes já estão feitos, dá pra puxar das tarefas da semana que vem se for mesmo o caso)
+
+- Começar o código para Rádio Controlável, estender pras outras semanas conforme for necessário
 
 | Semana  | 
 |---|
