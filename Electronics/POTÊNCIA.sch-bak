@@ -1,0 +1,280 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C?
+U 1 1 61C8D526
+P 7000 5900
+AR Path="/61C8D526" Ref="C?"  Part="1" 
+AR Path="/61C62796/61C8D526" Ref="C2"  Part="1" 
+F 0 "C2" H 7115 5946 50  0000 L CNN
+F 1 "100uF" H 7115 5855 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 7038 5750 50  0001 C CNN
+F 3 "~" H 7000 5900 50  0001 C CNN
+	1    7000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61C8D52C
+P 5350 5900
+AR Path="/61C8D52C" Ref="C?"  Part="1" 
+AR Path="/61C62796/61C8D52C" Ref="C1"  Part="1" 
+F 0 "C1" H 5465 5946 50  0000 L CNN
+F 1 "10uF" H 5465 5855 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 5388 5750 50  0001 C CNN
+F 3 "~" H 5350 5900 50  0001 C CNN
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 61C8D532
+P 5300 3150
+AR Path="/61C8D532" Ref="J?"  Part="1" 
+AR Path="/61C62796/61C8D532" Ref="J6"  Part="1" 
+F 0 "J6" H 5150 3600 50  0000 L CNN
+F 1 "ESQUERDO-PONTE-H" H 4650 3600 50  0001 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 5300 3150 50  0001 C CNN
+F 3 "~" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Female J?
+U 1 1 61C8D538
+P 5750 3250
+AR Path="/61C8D538" Ref="J?"  Part="1" 
+AR Path="/61C62796/61C8D538" Ref="J7"  Part="1" 
+F 0 "J7" H 5650 2700 50  0000 C CNN
+F 1 "DIREITO-PONTE-H" H 5200 2750 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 5750 3250 50  0001 C CNN
+F 3 "~" H 5750 3250 50  0001 C CNN
+	1    5750 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 61C8D53E
+P 5750 4500
+AR Path="/61C8D53E" Ref="J?"  Part="1" 
+AR Path="/61C62796/61C8D53E" Ref="J9"  Part="1" 
+F 0 "J9" H 5778 4476 50  0000 L CNN
+F 1 "Motor2" H 5778 4385 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5750 4500 50  0001 C CNN
+F 3 "~" H 5750 4500 50  0001 C CNN
+	1    5750 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 U?
+U 1 1 61C8D548
+P 6250 5750
+AR Path="/61C8D548" Ref="U?"  Part="1" 
+AR Path="/61C62796/61C8D548" Ref="U3"  Part="1" 
+F 0 "U3" H 6250 5992 50  0000 C CNN
+F 1 "LM7805_TO220" H 6250 5901 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6250 5975 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 6250 5700 50  0001 C CNN
+	1    6250 5750
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 6050
+Wire Wire Line
+	6250 6050 5350 6050
+Wire Wire Line
+	6250 6050 7000 6050
+Wire Wire Line
+	6550 5750 6750 5750
+Wire Wire Line
+	5950 5750 5650 5750
+$Comp
+L Placa-cache:CIRCUITOS-INTEGRADOS_TB6612FNG_Dual_Motor_Driver_Carrier U?
+U 1 1 61C8D553
+P 5600 1750
+AR Path="/61C8D553" Ref="U?"  Part="1" 
+AR Path="/61C62796/61C8D553" Ref="U2"  Part="1" 
+F 0 "U2" H 5575 2317 50  0000 C CNN
+F 1 "CIRCUITOS-INTEGRADOS_TB6612FNG_Dual_Motor_Driver_Carrier" H 5575 2250 20  0001 C CNN
+F 2 "BIBLIOTECA_FOGUETE:TB6612FNG_PLACA-RED" V 5650 1700 50  0001 C CNN
+F 3 "" V 5650 1700 50  0001 C CNN
+	1    5600 1750
+	1    0    0    -1  
+$EndComp
+Text GLabel 5100 1400 0    50   Input ~ 0
++BAT
+Text GLabel 5100 1700 0    50   Output ~ 0
+AO1
+Text GLabel 5100 1800 0    50   Output ~ 0
+AO2
+Text GLabel 5100 1900 0    50   Output ~ 0
+BO2
+Text GLabel 5100 2000 0    50   Output ~ 0
+BO1
+Wire Wire Line
+	7000 5750 7000 5600
+Wire Wire Line
+	7000 5600 7050 5600
+Connection ~ 7000 5750
+Wire Wire Line
+	6200 6200 6250 6200
+Wire Wire Line
+	6250 6200 6250 6050
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61C8D581
+P 4950 5750
+AR Path="/61C8D581" Ref="SW?"  Part="1" 
+AR Path="/61C62796/61C8D581" Ref="SW2"  Part="1" 
+F 0 "SW2" H 4950 6035 50  0000 C CNN
+F 1 "SW_Push" H 4950 5944 50  0000 C CNN
+F 2 "Button_Switch_THT:Nidec_Copal_SH-7010C" H 4950 5950 50  0001 C CNN
+F 3 "~" H 4950 5950 50  0001 C CNN
+	1    4950 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 5750 5350 5750
+Connection ~ 5350 5750
+Wire Wire Line
+	5650 5550 5650 5750
+Connection ~ 5650 5750
+Wire Wire Line
+	5650 5750 5350 5750
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 61C8D58C
+P 4250 5750
+AR Path="/61C8D58C" Ref="J?"  Part="1" 
+AR Path="/61C62796/61C8D58C" Ref="J10"  Part="1" 
+F 0 "J10" H 4358 5931 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4358 5840 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 4250 5750 50  0001 C CNN
+F 3 "~" H 4250 5750 50  0001 C CNN
+	1    4250 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 5850 4550 5850
+Wire Wire Line
+	4550 5850 4550 6050
+Wire Wire Line
+	4550 6050 5350 6050
+Connection ~ 5350 6050
+Wire Wire Line
+	4750 5750 4450 5750
+Wire Wire Line
+	6750 5450 6750 5750
+Connection ~ 6750 5750
+Wire Wire Line
+	6750 5750 7000 5750
+$Comp
+L power:GND #PWR?
+U 1 1 61C8D59B
+P 6250 6200
+AR Path="/61C8D59B" Ref="#PWR?"  Part="1" 
+AR Path="/61C62796/61C8D59B" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 6250 5950 50  0001 C CNN
+F 1 "GND" H 6255 6027 50  0000 C CNN
+F 2 "" H 6250 6200 50  0001 C CNN
+F 3 "" H 6250 6200 50  0001 C CNN
+	1    6250 6200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 6200
+$Comp
+L Connector:Conn_01x02_Female J?
+U 1 1 61C8D5A2
+P 5750 4000
+AR Path="/61C8D5A2" Ref="J?"  Part="1" 
+AR Path="/61C62796/61C8D5A2" Ref="J8"  Part="1" 
+F 0 "J8" H 5778 3976 50  0000 L CNN
+F 1 "Motor1" H 5778 3885 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 5750 4000 50  0001 C CNN
+F 3 "~" H 5750 4000 50  0001 C CNN
+	1    5750 4000
+	1    0    0    -1  
+$EndComp
+Text HLabel 6750 5450 1    50   Output ~ 0
+RAW
+Text HLabel 7050 5600 2    50   Output ~ 0
++5V
+Text HLabel 6200 6200 0    50   Output ~ 0
+GND
+Text HLabel 5950 2850 2    50   Input ~ 0
+PWMA
+Text HLabel 5950 2950 2    50   Input ~ 0
+AIN2
+Text HLabel 5950 3050 2    50   Input ~ 0
+AIN1
+Text HLabel 5950 3150 2    50   Input ~ 0
+STBY
+Text HLabel 5950 3250 2    50   Input ~ 0
+BIN1
+Text HLabel 5950 3350 2    50   Input ~ 0
+BIN2
+Text HLabel 5950 3450 2    50   Input ~ 0
+PWMB
+Text HLabel 5950 3550 2    50   Input ~ 0
+GND
+Text GLabel 5650 5550 0    50   Input ~ 0
++BAT
+Text HLabel 6050 1400 2    50   Input ~ 0
+PWMA
+Text HLabel 6050 1500 2    50   Input ~ 0
+AIN2
+Text HLabel 6050 1600 2    50   Input ~ 0
+AIN1
+Text HLabel 6050 1700 2    50   Input ~ 0
+STBY
+Text HLabel 6050 1800 2    50   Input ~ 0
+BIN1
+Text HLabel 6050 1900 2    50   Input ~ 0
+BIN2
+Text HLabel 6050 2000 2    50   Input ~ 0
+PWMB
+Text HLabel 6050 2100 2    50   Input ~ 0
+GND
+Text HLabel 5100 1500 0    50   Input ~ 0
++5V
+Text HLabel 5100 1600 0    50   Input ~ 0
+GND
+Text HLabel 5100 2100 0    50   Input ~ 0
+GND
+Text GLabel 5100 2850 0    50   Input ~ 0
++BAT
+Text GLabel 5100 3150 0    50   Output ~ 0
+AO1
+Text GLabel 5100 3250 0    50   Output ~ 0
+AO2
+Text GLabel 5100 3350 0    50   Output ~ 0
+BO2
+Text GLabel 5100 3450 0    50   Output ~ 0
+BO1
+Text HLabel 5100 2950 0    50   Input ~ 0
++5V
+Text HLabel 5100 3050 0    50   Input ~ 0
+GND
+Text HLabel 5100 3550 0    50   Input ~ 0
+GND
+Text GLabel 5550 4100 0    50   Output ~ 0
+AO1
+Text GLabel 5550 4000 0    50   Output ~ 0
+AO2
+Text GLabel 5550 4600 0    50   Output ~ 0
+BO2
+Text GLabel 5550 4500 0    50   Output ~ 0
+BO1
+$EndSCHEMATC
