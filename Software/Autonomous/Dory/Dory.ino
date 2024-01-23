@@ -5,7 +5,7 @@
 #include "IRJudgeControllerSensor.h"
 
 // declarando variáveis do robô
-int flag = 0;  //flag 0: esquerda; flag 1: direita 
+int flag = 0;  //flag 0: esquerda; flag 1: direita
 int velMax = 100;
 
 
@@ -14,13 +14,16 @@ void simpleStrategy() {
   if (distanceLeft >= minimumDistance && distanceRight >= minimumDistance) {  // Percebe o inimigo à frente
     velMotorL = velMax;
     velMotorR = velMax;
+    Serial.print("ATACANDO \t\t");
   } else if (distanceLeft >= minimumDistance || distanceRight >= minimumDistance) {  // Procurando inimigo
     velMotorL = (distanceLeft >= minimumDistance) ? velMax * 0.5 : velMax * 0.9;     // Achei na esquerda
-    velMotorR = (distanceRight >= minimumDistance) ? velMax * 0.5 : velMax * 0.9;    // Achei na direita
+    velMotorR = (distanceLeft >= minimumDistance) ? velMax * 0.9 : velMax * 0.5;    // Achei na direita
     flag = (distanceLeft >= minimumDistance) ? 0 : 1;
+    (distanceLeft >= minimumDistance) ? Serial.print("ESQ \t\t") : Serial.print("DIR \t\t");
   } else {                                                       // Perdi o inimigo
-    velMotorL = (flag == 0) ? -velMax * 0.341 : velMax * 0.341;  // Gira pra esquerda
-    velMotorR = (flag == 1) ? velMax * 0.341 : -velMax * 0.341;  // Gira pra direita
+    velMotorL = (flag == 0) ? -velMax * 0.34 : velMax * 0.34;  // Gira pra esquerda ou
+    velMotorR = (flag == 0) ? velMax * 0.34 : -velMax * 0.34;  // Gira pra direita
+    (flag == 0) ? Serial.print("PROCURANDO ESQ \t\t") :  Serial.print("PROCURANDO DIR \t\t");
   }
 }
 
@@ -52,24 +55,11 @@ void loop() {
   // O mode define oq o robo vai fazer -> 3: o 0 - nada; 1 - roda a estrategia e 2- para tudo.
 
   // Ve qual mode eu estou e como agir em cada
-  switch (mode) {
-    case 1:
-      // Mode 1
-      break;
-    case 2:
-      // Mode 2
-      /* Posso criar mais switch cases aqui para escolha
-      das estratégias, como na linha 199 pra baixo*/
-      simpleStrategy();
-      // Estratégia da dory
-      break;
-    case 3:
-      // Mode 3
-      // Para o robô (colocar que a velocidade é 0)
-      break;
-    default:  // Tipo o else (esse é qqr mode q não seja o 1, 2 e 3.)
-      // Pare
-      break;
+  if (isRunning) {
+    simpleStrategy();
+  } else {
+    velMotorL = 0;
+    velMotorR = 0;
   }
 
   motorsOutput();  // Manda para a ponte H as velocidades
