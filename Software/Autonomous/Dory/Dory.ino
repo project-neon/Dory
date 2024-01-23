@@ -4,17 +4,25 @@
 #include "DistanceSensors.h"
 #include "IRJudgeControllerSensor.h"
 
-
 // declarando variáveis do robô
-
-int sensorL = 0; //Inicia com um valor inicial para a esquerda
-int sensorR = 0; //Inicia com um valor inicial para a direita
-int margem = 5;   //margem de segurança para a estratégia de erro
-int velR = 0; //Velocidade da direita
-int velL = 0; //Velocidade da esquerda
-int flag = 0; //flag 0: esquerda; flag 1: direita 
+int flag = 0;  //flag 0: esquerda; flag 1: direita 
+int velMax = 100;
 
 
+// Estratégia da Dory
+void simpleStrategy() {
+  if (distanceLeft >= minimumDistance && distanceRight >= minimumDistance) {  // Percebe o inimigo à frente
+    velMotorL = velMax;
+    velMotorR = velMax;
+  } else if (distanceLeft >= minimumDistance || distanceRight >= minimumDistance) {  // Procurando inimigo
+    velMotorL = (distanceLeft >= minimumDistance) ? velMax * 0.5 : velMax * 0.9;     // Achei na esquerda
+    velMotorR = (distanceRight >= minimumDistance) ? velMax * 0.5 : velMax * 0.9;    // Achei na direita
+    flag = (distanceLeft >= minimumDistance) ? 0 : 1;
+  } else {                                                       // Perdi o inimigo
+    velMotorL = (flag == 0) ? -velMax * 0.341 : velMax * 0.341;  // Gira pra esquerda
+    velMotorR = (flag == 1) ? velMax * 0.341 : -velMax * 0.341;  // Gira pra direita
+  }
+}
 
 void setup() {
   //inicia as coisas da dory
@@ -35,70 +43,36 @@ void setup() {
 
 void loop() {
 
-  checkSensorIR(); //tá fazendo o check do sensor aqui
-//checa o botão e muda o mode para qual botão foi clicado
+  // Tá fazendo o check do sensor aqui
+  checkSensorIR();  // Checa o botão e muda o mode para qual botão foi clicado
 
+  readDistanceSensorsValues();  // Atualiza os valores da distância
 
-//criando a estratégia da Dory:
+  // O controle muda o mode
+  // O mode define oq o robo vai fazer -> 3: o 0 - nada; 1 - roda a estrategia e 2- para tudo.
 
-  void simplesStrategy(float vel_max){
-    printDebug();
-    if (sensorL <= distMed && sensorR <= distMed){ //percebe o inimigo à frente
-    velL = vel_max;
-    velR = vel_max;
-    }
-    return;
-  }
-  else if(sensorL <= distMed || sensorR <= distMed){ //procurando inimigo
-    velL = (sensorL <= distMax) ? vel_max*0.5 : vel_max*0.9; //achei na esquerda
-    velR = (sensorR <= distMax) ? vel_max*0.5 : vel_max*0.9; //achei na direita
-    flag = (sensorL <= distMax) ? 0 : 1;
-  }
-  else {//perdi o inimigo
-    velL = (flag == 0) ? -vel_max*0.341 : vel_max*0.341; //gira pra esquerda
-    velR = (flag == 1) ? vel_max*0.341 : -vel_max*0.341; //gira pra direita
-  }
-}
-
-
-//o controle muda o mode, 
-// o mode define oq o robô vai fazer -> 3: o 0 - nada; 1 - roda a estratégia e 2- para tudo.
-
-//vê qual mode eu estou e como agir em cada 
-  switch (mode){
+  // Ve qual mode eu estou e como agir em cada
+  switch (mode) {
     case 1:
-      //mode 1
+      // Mode 1
       break;
     case 2:
-      //mode 2
-      /*posso criar mais switch cases aqui para escolha
+      // Mode 2
+      /* Posso criar mais switch cases aqui para escolha
       das estratégias, como na linha 199 pra baixo*/
-      simpleStrategy(90); // =======>>>> vi esse noventa no código e copiei tb, mas não entendi oq significa kkkkkkkk
-      //estratégia da dory
+      simpleStrategy();
+      // Estratégia da dory
       break;
     case 3:
-      //mode 3
-      //para o robô (colocar que a velocidade é 0)
+      // Mode 3
+      // Para o robô (colocar que a velocidade é 0)
       break;
-    default: //tipo o else (esse é qqr mode q não seja o 1, 2 e 3.)
-      //pare
+    default:  // Tipo o else (esse é qqr mode q não seja o 1, 2 e 3.)
+      // Pare
       break;
   }
 
-
-
-
-
-
-
-
-
-
-
-  readDistanceSensorsValues();  //Atualiza os valores da distância
-  if (distanceLeft > mininumDistance && distanceRight > mininumDistance) velMotorR = velMotorL = -50;
-  else velMotorR = velMotorL = 0;
-  motorsOutput();  //Manda para a ponte H as velocidades
+  motorsOutput();  // Manda para a ponte H as velocidades
 
   distanceSensorsPrint();
   motorsPrintVel();
