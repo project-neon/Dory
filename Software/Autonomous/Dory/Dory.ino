@@ -16,14 +16,14 @@ void simpleStrategy() {
     velMotorR = velMax;
     Serial.print("ATACANDO \t\t");
   } else if (distanceLeft >= minimumDistance || distanceRight >= minimumDistance) {  // Procurando inimigo
-    velMotorL = (distanceLeft >= minimumDistance) ? velMax * 0.5 : velMax * 0.9;     // Achei na esquerda
-    velMotorR = (distanceLeft >= minimumDistance) ? velMax * 0.9 : velMax * 0.5;    // Achei na direita
+    velMotorL = (distanceLeft >= minimumDistance) ? velMax * 0.9 : velMax;           // Achei na esquerda
+    velMotorR = (distanceLeft >= minimumDistance) ? velMax : velMax * 0.9;           // Achei na direita
     flag = (distanceLeft >= minimumDistance) ? 0 : 1;
     (distanceLeft >= minimumDistance) ? Serial.print("ESQ \t\t") : Serial.print("DIR \t\t");
-  } else {                                                       // Perdi o inimigo
-    velMotorL = (flag == 0) ? -velMax * 0.34 : velMax * 0.34;  // Gira pra esquerda ou
-    velMotorR = (flag == 0) ? velMax * 0.34 : -velMax * 0.34;  // Gira pra direita
-    (flag == 0) ? Serial.print("PROCURANDO ESQ \t\t") :  Serial.print("PROCURANDO DIR \t\t");
+  } else {                                                   // Perdi o inimigo
+    velMotorL = (flag == 0) ? -velMax * 0.7 : velMax * 0.7;  // Gira pra esquerda ou
+    velMotorR = (flag == 0) ? velMax * 0.7 : -velMax * 0.7;  // Gira pra direita
+    (flag == 0) ? Serial.print("PROCURANDO ESQ \t\t") : Serial.print("PROCURANDO DIR \t\t");
   }
 }
 
