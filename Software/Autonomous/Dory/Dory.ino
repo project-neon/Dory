@@ -9,8 +9,9 @@ int flag = 0;  //flag 0: esquerda; flag 1: direita
 int velMax = 100;
 
 
-// Estratégia da Dory
+// Estratégia simples da Dory
 void simpleStrategy() {
+
   if (distanceLeft >= minimumDistance && distanceRight >= minimumDistance) {  // Percebe o inimigo à frente
     velMotorL = velMax;
     velMotorR = velMax;

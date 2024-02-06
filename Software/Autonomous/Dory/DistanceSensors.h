@@ -2,7 +2,7 @@ int distanceLeftList[DISTANCE_ARRAY_LENGHT] = { 0 };
 int distanceRightList[DISTANCE_ARRAY_LENGHT] = { 0 };
 int distanceLeft = 0;
 int distanceRight = 0;
-int minimumDistance = 150;
+int minimumDistance = 20;
 
 void distanceSensorsInit() {
   pinMode(DIST_SENSOR_SHARP_LEFT_PIN, INPUT);

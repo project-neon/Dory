@@ -36,8 +36,8 @@ void motorsOutput() {
   // Quando estamos indo do Anti-Horário pro Horário (IN2 --> IN1), o 0 deve ser do canal IN2
 
   //Mapeia o valor da escala [-100, 100] para a escala do PWM
-  velMotorRMapped = map(abs(velMotorR), 0, 100, 0, totalBits);
-  velMotorLMapped = map(abs(velMotorL), 0, 100, 0, totalBits);
+  velMotorRMapped = map(velMotorR, -100, 100, 0, totalBits);
+  velMotorLMapped = map(velMotorL, -100, 100, 0, totalBits);
 
   //Envia para o motor o sinal PWM
   ledcWrite((velMotorR > 0) ? chRightIN1 : chRightIN2, velMotorRMapped);
