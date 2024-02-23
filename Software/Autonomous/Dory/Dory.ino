@@ -6,27 +6,29 @@
 
 // declarando variáveis do robô
 int flag = 0;  //flag 0: esquerda; flag 1: direita
-int velMax = 100;
+int velMaxR = 100;
+int velMaxL = 90;
 
 
 // Estratégia simples da Dory
 void simpleStrategy() {
 
   if (distanceLeft >= minimumDistance && distanceRight >= minimumDistance) {  // Percebe o inimigo à frente
-    velMotorL = velMax;
-    velMotorR = velMax;
+    velMotorL = velMaxL;
+    velMotorR = velMaxR;
     Serial.print("ATACANDO \t\t");
   } else if (distanceLeft >= minimumDistance || distanceRight >= minimumDistance) {  // Procurando inimigo
-    velMotorL = (distanceLeft >= minimumDistance) ? velMax * 0.9 : velMax;           // Achei na esquerda
-    velMotorR = (distanceLeft >= minimumDistance) ? velMax : velMax * 0.9;           // Achei na direita
+    velMotorL = (distanceLeft >= minimumDistance) ? velMaxR * 0.7 : velMaxL;           // Achei na esquerda
+    velMotorR = (distanceLeft >= minimumDistance) ? velMaxR : velMaxL * 0.7;           // Achei na direita
     flag = (distanceLeft >= minimumDistance) ? 0 : 1;
     (distanceLeft >= minimumDistance) ? Serial.print("ESQ \t\t") : Serial.print("DIR \t\t");
   } else {                                                   // Perdi o inimigo
-    velMotorL = (flag == 0) ? -velMax * 0.7 : velMax * 0.7;  // Gira pra esquerda ou
-    velMotorR = (flag == 0) ? velMax * 0.7 : -velMax * 0.7;  // Gira pra direita
+    velMotorL = (flag == 0) ? -velMaxR * 0.4 : velMaxL * 0.4;  // Gira pra esquerda ou
+    velMotorR = (flag == 0) ? velMaxR * 0.4 : -velMaxL * 0.4;  // Gira pra direita
     (flag == 0) ? Serial.print("PROCURANDO ESQ \t\t") : Serial.print("PROCURANDO DIR \t\t");
   }
-}
+
+} 
 
 void setup() {
   //inicia as coisas da dory
