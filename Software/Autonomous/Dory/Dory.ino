@@ -7,7 +7,7 @@
 // declarando variáveis do robô
 int flag = 0;  //flag 0: esquerda; flag 1: direita
 int velMaxR = 100;
-int velMaxL = 90;
+int velMaxL = 87;
 
 
 // Estratégia simples da Dory
