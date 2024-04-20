@@ -6,8 +6,8 @@
 
 // Declara as variáveis do robô
 int flag = 0;  //flag 0: esquerda; flag 1: direita
-int velMaxR = 92;
-int velMaxL = 90.5;
+int velMaxR = 100;
+int velMaxL = 97.5;
 
 
 // Criação da estratégia simples da Dory
@@ -55,9 +55,6 @@ void loop() {
   // Roda a programação de acordo com os casos do sensor de IR
   if (isRunning) {
     simpleStrategy();
-  } else {
-    velMotorL = 0;
-    velMotorR = 0;
   }
 
   motorsOutput();  // Manda as velocidades para a ponte H

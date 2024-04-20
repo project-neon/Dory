@@ -1,6 +1,0 @@
-(sym_lib_table
-  (lib (name Arduino_Mini_Pro_Neon-rescue)(type Legacy)(uri ${KIPRJMOD}/Arduino_Mini_Pro_Neon-rescue.lib)(options "")(descr ""))
-  (lib (name arduino)(type Legacy)(uri "C:/Users/FOGUETE/OneDrive/MEU/NEON/SQUAD-NEON/SUMÔ/MINI-SUMO-500g/Projeto - Nemo/Biblioteca-Nemo/Documentos/Circuito Kicad/05-08-2021-modificado/arduino-kicad-library-master/arduino.lib")(options "")(descr ""))
-  (lib (name Placa-cache)(type Legacy)(uri "C:/Users/FOGUETE/OneDrive/MEU/NEON/SQUAD-NEON/SUMÔ/MINI-SUMO-500g/Projeto - Nemo/Biblioteca-Nemo/Documentos/Circuito Kicad/05-08-2021-modificado/Placa-cache.lib")(options "")(descr ""))
-  (lib (name Placa-rescue)(type Legacy)(uri "C:/Users/FOGUETE/OneDrive/MEU/NEON/SQUAD-NEON/SUMÔ/MINI-SUMO-500g/Projeto - Nemo/Biblioteca-Nemo/Documentos/Circuito Kicad/05-08-2021-modificado/Placa-rescue.lib")(options "")(descr ""))
-)

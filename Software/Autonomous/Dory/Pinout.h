@@ -16,5 +16,5 @@
 
 // Sensores de distância
 #define DIST_SENSOR_SHARP_LEFT_PIN 4
-#define DIST_SENSOR_SHARP_RIGHT_PIN 2
+#define DIST_SENSOR_SHARP_RIGHT_PIN 15
 #define DISTANCE_ARRAY_LENGHT 20  // Tamanho da lista utilizada para armazenar as medidas do Sharp

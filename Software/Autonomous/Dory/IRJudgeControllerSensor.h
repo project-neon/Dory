@@ -27,7 +27,12 @@ void checkSensorIR() {
       case 0x3:
       case 0x13:
         Serial.println("Apertou o botão 3");
-        isRunning = false;
+        while (1) {
+          isRunning = false;
+          velMotorL = 0;
+          velMotorR = 0;
+          motorsOutput();
+        }
         break;
     }
 
