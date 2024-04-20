@@ -1,9 +1,10 @@
 #include <IRremote.hpp>  // Version 4.2.0
 
+// Inicializa com a programação off até testes de casos serem realizados
 bool isRunning = false;
 
 void IRJudgeControllerSensorInit() {
-  IrReceiver.begin(JUDGE_CONTROLLER_PIN, ENABLE_LED_FEEDBACK);
+  IrReceiver.begin(JUDGE_CONTROLLER_PIN, ENABLE_LED_FEEDBACK); // Inicializa teste do led e sensor do IR
 }
 
 void checkSensorIR() {
@@ -11,16 +12,18 @@ void checkSensorIR() {
     Serial.println(IrReceiver.decodedIRData.command, HEX);
 
     switch (IrReceiver.decodedIRData.command) {
-      // caso 1: liga o led p sabermos que o IR tá funcionando
+      // Teste do led para sabermos se o IR está funcionando
       case 0x1:
       case 0x11:
         Serial.println("Apertou o botão 1");
         break;
+      // Inicializa a estratégia simples
       case 0x2:
       case 0x12:
         Serial.println("Apertou o botão 2");
         isRunning = true;
         break;
+      // Finaliza o loop
       case 0x3:
       case 0x13:
         Serial.println("Apertou o botão 3");
