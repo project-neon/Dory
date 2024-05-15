@@ -1,3 +1,10 @@
+// Pinos ligados a ponte H
+#define MOTOR_RIGHT_IN1_PIN 26
+#define MOTOR_RIGHT_IN2_PIN 27
+#define MOTOR_LEFT_IN1_PIN 33
+#define MOTOR_LEFT_IN2_PIN 25
+#define STANDBY_PIN 32
+
 const int motorsInputPins[4] = { MOTOR_RIGHT_IN1_PIN, MOTOR_RIGHT_IN2_PIN, MOTOR_LEFT_IN1_PIN, MOTOR_LEFT_IN2_PIN };  // Lista com os pinos de entrada dos motors
 
 // Estabelecendo os canais PWM que serão utilizados
@@ -17,17 +24,6 @@ int velMotorL = 0;        // Vel esquerda, vai de [-100, 100]
 int velMotorRMapped = 0;  // Vel direita, vai de [-totalBits, totalBits]
 int velMotorLMapped = 0;  // Vel esquerda, vai de [-totalBits, totalBits]
 int somaVel = 25;         // De quanto em quanto a vel aumenta ou diminui no loop
-
-void motorsInit() {
-  pinMode(STANDBY_PIN, OUTPUT);
-  digitalWrite(STANDBY_PIN, HIGH);
-
-  for (int i = 0; i < 4; i++) {
-    pinMode(motorsInputPins[i], OUTPUT);   // Fazemos os pinos MOTOR_RIGHT_IN1_PIN, MOTOR_RIGHT_IN2_PIN, MOTOR_LEFT_IN1_PIN e MOTOR_LEFT_IN2_PIN serem OUTPUTs
-    ledcSetup(i, freq, resolution);        // Atribui a todos os canais i (= 0, 1, 2, 3) a frequencia de 50Hz com resolucao de 12bits.
-    ledcAttachPin(motorsInputPins[i], i);  // Associamos os pinos MOTOR_RIGHT_IN1_PIN, MOTOR_RIGHT_IN2_PIN, MOTOR_LEFT_IN1_PIN e MOTOR_LEFT_IN2_PIN aos canais i (= 0, 1, 2, 3) respectivamente.
-  }
-}
 
 void motorsOutput() {
   // IN1 --> Horário, Positivo -------- IN2 --> Anti-horário, Negativo
@@ -49,5 +45,47 @@ void motorsOutput() {
 }
 
 void motorsPrintVel() {
-  Serial.println("\t\tMotor_E: " + (String)velMotorLMapped + "\tMotor_D: " + (String)velMotorRMapped);
+  Serial.println("Motor_E: " + (String)velMotorL + "\tMotor_D: " + (String)velMotorR);
+}
+
+void setup() {
+  Serial.begin(115200);  // Iniciando o monitor serial
+
+  pinMode(STANDBY_PIN, OUTPUT);
+  digitalWrite(STANDBY_PIN, HIGH);
+
+  for (int i = 0; i < 4; i++) {
+    pinMode(motorsInputPins[i], OUTPUT);   // Fazemos os pinos MOTOR_RIGHT_IN1_PIN, MOTOR_RIGHT_IN2_PIN, MOTOR_LEFT_IN1_PIN e MOTOR_LEFT_IN2_PIN serem OUTPUTs
+    ledcSetup(i, freq, resolution);        // Atribui a todos os canais i (= 0, 1, 2, 3) a frequencia de 50Hz com resolucao de 12bits.
+    ledcAttachPin(motorsInputPins[i], i);  // Associamos os pinos MOTOR_RIGHT_IN1_PIN, MOTOR_RIGHT_IN2_PIN, MOTOR_LEFT_IN1_PIN e MOTOR_LEFT_IN2_PIN aos canais i (= 0, 1, 2, 3) respectivamente.
+  }
+
+  // Vai pra frente
+  velMotorR = velMotorL = 100;
+  motorsOutput();
+  motorsPrintVel();
+  delay(3000);
+
+  // Vai pra direita
+  velMotorR = -50;
+  velMotorL = 100;
+  motorsOutput();
+  motorsPrintVel();
+  delay(3000);
+
+  // Vai pra esquerda
+  velMotorR = 100;
+  velMotorL = -50;
+  motorsOutput();
+  motorsPrintVel();
+  delay(3000);
+}
+
+void loop() {
+  // Vai para frente e para trás variando a velocidade
+  if (abs(velMotorR) >= 100) somaVel = -somaVel;
+  velMotorR = velMotorL = velMotorR + somaVel;
+  motorsOutput();
+  motorsPrintVel();
+  delay(500);
 }
