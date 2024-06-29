@@ -2001,7 +2001,7 @@
 		)
 		(uuid "fe5b8e68-b692-455d-8e63-c5f911ea02e2")
 	)
-	(text "Falta fazer:\n- Adicionar 2 sensores de distância Sharp:\n  - Divisor de tensão (?) OpAmp (?)\n- Adicionar 2 sensores de distância VL53L0X\n- Adicionar LED para quando a bateria está fraca (?)\n\n- Definir Footprints\n- Definir valores dos capacitores"
+	(text "Falta fazer:\n- Adicionar 2 sensores de distância Sharp:\n  - Divisor de tensão (?) OpAmp (?)\n- Adicionar LED Diodo Zenner para quando a bateria está fraca (?)\n\n- Definir Footprints\n- Definir valores dos capacitores"
 		(exclude_from_sim no)
 		(at 105.664 35.814 0)
 		(effects
@@ -2137,7 +2137,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 191.262 85.852 180)
+		(at 195.58 83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2146,7 +2146,7 @@
 		)
 		(uuid "15a4118f-b7fe-46cc-a1e9-54229e39de18")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 85.852 0)
+			(at 195.58 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2219,7 +2219,7 @@
 	)
 	(global_label "XSHUT_D"
 		(shape input)
-		(at 191.008 126.238 180)
+		(at 195.58 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2228,7 +2228,7 @@
 		)
 		(uuid "25db7122-67c4-4859-8907-3225614a55bb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.008 126.238 0)
+			(at 195.58 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2319,28 +2319,6 @@
 			)
 		)
 	)
-	(global_label "3V3"
-		(shape input)
-		(at 191.262 99.314 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "3d30a72d-e54f-4e96-9b92-cbefb8ed41b8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 184.7692 99.314 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BIN1"
 		(shape output)
 		(at 133.35 94.5896 180)
@@ -2393,26 +2371,6 @@
 		(uuid "4606115b-d51e-4ec6-a273-d66eb48fdc3b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 133.35 121.7676 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "XSHUT_D"
-		(shape output)
-		(at 169.672 102.743 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "479ae216-36a4-42d4-a3c3-521fc152ec9e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.672 102.743 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2488,7 +2446,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 191.008 116.078 180)
+		(at 195.58 99.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2498,7 +2456,7 @@
 		)
 		(uuid "64f66b5c-20b9-4554-9365-1c27e0a235f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 184.5152 116.078 0)
+			(at 189.0872 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2510,7 +2468,7 @@
 	)
 	(global_label "SDA"
 		(shape bidirectional)
-		(at 191.008 123.698 180)
+		(at 195.58 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2519,7 +2477,7 @@
 		)
 		(uuid "671f4333-c5cf-4b15-ade4-cad7ba4de350")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.008 123.698 0)
+			(at 195.58 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2530,7 +2488,7 @@
 	)
 	(global_label "SDA"
 		(shape bidirectional)
-		(at 191.262 90.932 180)
+		(at 195.58 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2539,27 +2497,7 @@
 		)
 		(uuid "684f5344-9fe9-47c0-a245-129182d586f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 90.932 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 191.262 101.854 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6e4378b8-aa23-4b0e-8d06-b152341647d4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 101.854 0)
+			(at 195.58 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2570,7 +2508,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 191.262 83.312 180)
+		(at 195.58 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2580,7 +2518,7 @@
 		)
 		(uuid "6f05cfd4-cbd2-4ddc-a95c-867ab7f1333d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 184.7692 83.312 0)
+			(at 189.0872 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2610,29 +2548,9 @@
 			)
 		)
 	)
-	(global_label "SDA"
-		(shape bidirectional)
-		(at 191.262 106.934 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9f94d557-42ed-468a-85ec-d2321bd71893")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 106.934 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SCL"
 		(shape input)
-		(at 191.008 121.158 180)
+		(at 195.58 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2641,7 +2559,7 @@
 		)
 		(uuid "9fb1523c-3437-4a3c-bf73-246793cb0df2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.008 121.158 0)
+			(at 195.58 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2652,7 +2570,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 191.008 118.618 180)
+		(at 195.58 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2661,7 +2579,7 @@
 		)
 		(uuid "a6fee751-9d3e-4a0c-91c0-2b2361ffc0b3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.008 118.618 0)
+			(at 195.58 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2796,26 +2714,6 @@
 			)
 		)
 	)
-	(global_label "SCL"
-		(shape input)
-		(at 191.262 104.394 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c13b61a2-b68b-4b33-a782-96e7516b466f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 104.394 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "3V3"
 		(shape output)
 		(at 169.672 121.7676 0)
@@ -2838,7 +2736,7 @@
 	)
 	(global_label "XSHUT_E"
 		(shape input)
-		(at 191.262 93.472 180)
+		(at 195.58 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2847,7 +2745,7 @@
 		)
 		(uuid "caf99ada-09ad-4673-8b74-c1c76af1e13d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 93.472 0)
+			(at 195.58 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2856,7 +2754,7 @@
 			)
 		)
 	)
-	(global_label "XSHUT_C"
+	(global_label "XSHUT_D"
 		(shape output)
 		(at 169.799 100.076 0)
 		(effects
@@ -2900,7 +2798,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 191.262 88.392 180)
+		(at 195.58 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2909,7 +2807,7 @@
 		)
 		(uuid "dc8a0a37-ce63-4b53-a077-c6144bbf48ce")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 88.392 0)
+			(at 195.58 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2970,26 +2868,6 @@
 		(uuid "f5e00169-2566-4319-9f70-b4b65ad4c7f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 92.837 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "XSHUT_C"
-		(shape input)
-		(at 191.262 109.474 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f680a0ac-9996-47d9-a1b6-35374388d099")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.262 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3070,7 +2948,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
-		(at 196.342 88.392 0)
+		(at 200.66 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3079,7 +2957,7 @@
 		(fields_autoplaced yes)
 		(uuid "24c10cea-62bc-4651-b736-31339cf9885e")
 		(property "Reference" "J7"
-			(at 199.136 87.1219 0)
+			(at 203.454 85.0899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3088,7 +2966,7 @@
 			)
 		)
 		(property "Value" "VL53L0X_ESQUERDO"
-			(at 199.136 89.6619 0)
+			(at 203.454 87.6299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3097,7 +2975,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 196.342 88.392 0)
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3106,7 +2984,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.342 88.392 0)
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3115,7 +2993,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.342 88.392 0)
+			(at 200.66 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3527,7 +3405,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
-		(at 196.088 121.158 0)
+		(at 200.66 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3535,7 +3413,7 @@
 		(dnp no)
 		(uuid "912e8668-8f52-4195-9640-ff7047bff656")
 		(property "Reference" "J9"
-			(at 198.882 119.8879 0)
+			(at 203.454 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3544,7 +3422,7 @@
 			)
 		)
 		(property "Value" "VL53L0X_DIREITO"
-			(at 198.882 122.4279 0)
+			(at 203.454 105.4099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3553,7 +3431,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 196.088 121.158 0)
+			(at 200.66 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3562,7 +3440,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 196.088 121.158 0)
+			(at 200.66 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3571,7 +3449,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.088 121.158 0)
+			(at 200.66 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3668,84 +3546,6 @@
 			(project "Dory_electronics"
 				(path "/fabeacd8-20bd-469b-8d85-e92cd7a4b6cb"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x05")
-		(at 196.342 104.394 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a80678af-ff7d-4552-98e2-1ebcf3b07ef3")
-		(property "Reference" "J8"
-			(at 199.136 103.1239 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "VL53L0X_CENTRO"
-			(at 199.136 105.6639 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 196.342 104.394 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.342 104.394 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 196.342 104.394 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9b25efde-8088-4ac8-b18e-d886fcceb4f7")
-		)
-		(pin "2"
-			(uuid "8d73f613-5b9d-4e4a-b827-9635e94a050f")
-		)
-		(pin "4"
-			(uuid "f6ac5573-7333-442f-997a-205033c8081b")
-		)
-		(pin "5"
-			(uuid "5656ac70-eeb0-4027-a008-bac4b4d051e5")
-		)
-		(pin "3"
-			(uuid "03837539-9fdc-4fd6-a7c4-102a69e075d4")
-		)
-		(instances
-			(project "Dory_electronics"
-				(path "/fabeacd8-20bd-469b-8d85-e92cd7a4b6cb"
-					(reference "J8")
 					(unit 1)
 				)
 			)
