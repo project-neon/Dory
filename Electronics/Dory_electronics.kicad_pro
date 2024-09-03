@@ -427,7 +427,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "esp32_devkit_v1_doit"
+    ]
   },
   "meta": {
     "filename": "Dory_electronics.kicad_pro",

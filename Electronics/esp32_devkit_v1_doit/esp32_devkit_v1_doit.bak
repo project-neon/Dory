@@ -720,8 +720,8 @@
 		)
 		(symbol "H-Brigde_1_1"
 			(rectangle
-				(start -12.9032 12.9032)
-				(end 12.9032 -12.9032)
+				(start -8.89 11.43)
+				(end 8.89 -8.89)
 				(stroke
 					(width 0.1)
 					(type default)
@@ -745,7 +745,7 @@
 				)
 			)
 			(pin input line
-				(at -15.4432 11.6332 0)
+				(at -11.43 10.16 0)
 				(length 2.54)
 				(name "VM"
 					(effects
@@ -889,7 +889,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -15.24 7.62 0)
+				(at -11.43 7.62 0)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -907,7 +907,7 @@
 				)
 			)
 			(pin passive line
-				(at -15.24 3.81 0)
+				(at -11.43 5.08 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -925,7 +925,7 @@
 				)
 			)
 			(pin output line
-				(at -15.24 1.27 0)
+				(at -11.43 2.54 0)
 				(length 2.54)
 				(name "AO1"
 					(effects
@@ -943,7 +943,7 @@
 				)
 			)
 			(pin output line
-				(at -15.24 -2.54 0)
+				(at -11.43 0 0)
 				(length 2.54)
 				(name "AO2"
 					(effects
@@ -961,7 +961,7 @@
 				)
 			)
 			(pin output line
-				(at -15.24 -6.35 0)
+				(at -11.43 -2.54 0)
 				(length 2.54)
 				(name "BO2"
 					(effects
@@ -979,7 +979,7 @@
 				)
 			)
 			(pin output line
-				(at -15.24 -8.89 0)
+				(at -11.43 -5.08 0)
 				(length 2.54)
 				(name "BO1"
 					(effects
@@ -997,7 +997,7 @@
 				)
 			)
 			(pin passive line
-				(at -15.24 -11.43 0)
+				(at -11.43 -7.62 0)
 				(length 2.54)
 				(name "GND"
 					(effects
