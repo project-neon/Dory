@@ -2383,6 +2383,10 @@
 		(uuid "fb612ced-89f9-436a-bdcc-7e7462456626")
 	)
 	(no_connect
+		(at 71.12 67.31)
+		(uuid "034c82ea-c9a7-4519-8232-d3913cd6990c")
+	)
+	(no_connect
 		(at 43.18 52.07)
 		(uuid "04d4d505-4f9b-4fe7-a2aa-9a587f5bd7aa")
 	)
@@ -2411,6 +2415,10 @@
 		(uuid "41f6a94d-b11c-4c29-b73d-13de2746eb4b")
 	)
 	(no_connect
+		(at 43.18 67.31)
+		(uuid "46ce7524-abbf-4982-a60b-473d5821c5dc")
+	)
+	(no_connect
 		(at 162.052 108.2548)
 		(uuid "4b73c819-ba59-47e3-8ba9-fa54558dd6df")
 	)
@@ -2425,14 +2433,6 @@
 	(no_connect
 		(at 162.0012 102.6922)
 		(uuid "70605cf1-8abe-41f5-bb84-7091461d9d1b")
-	)
-	(no_connect
-		(at 43.18 67.31)
-		(uuid "7f34a0cc-0f30-44aa-a1ee-7bb952bdcee4")
-	)
-	(no_connect
-		(at 71.12 67.31)
-		(uuid "9421537e-6576-4ce7-9371-ffbcadf1c9b6")
 	)
 	(no_connect
 		(at 162.052 110.998)
@@ -4052,7 +4052,7 @@
 			)
 		)
 	)
-	(global_label "XSHUT_D"
+	(global_label "XSHUT_E"
 		(shape output)
 		(at 162.179 94.996 0)
 		(effects
@@ -4156,7 +4156,7 @@
 			)
 		)
 	)
-	(global_label "XSHUT_E"
+	(global_label "XSHUT_D"
 		(shape output)
 		(at 162.179 92.4306 0)
 		(effects
