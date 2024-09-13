@@ -2399,20 +2399,12 @@
 		(uuid "1f242391-43c5-4ffc-8fe8-8e9f0991db6b")
 	)
 	(no_connect
-		(at 162.2552 77.9272)
-		(uuid "23d84a79-2dc7-4fde-8207-235271c7761d")
-	)
-	(no_connect
 		(at 162.052 100.2538)
 		(uuid "26531f49-137c-4168-8aa0-701c4feed163")
 	)
 	(no_connect
 		(at 125.73 105.41)
 		(uuid "2cde2054-52a5-4eb7-b334-14738e6e6429")
-	)
-	(no_connect
-		(at 162.052 86.5378)
-		(uuid "41f6a94d-b11c-4c29-b73d-13de2746eb4b")
 	)
 	(no_connect
 		(at 43.18 67.31)
@@ -2427,12 +2419,20 @@
 		(uuid "66db615f-cb3f-4c52-8357-00eccbd91b28")
 	)
 	(no_connect
+		(at 162.052 86.5378)
+		(uuid "6a99f138-daed-4e54-a234-d83c9cd786b0")
+	)
+	(no_connect
 		(at 125.73 108.2548)
 		(uuid "6fda733d-0443-40ee-8cb6-4fdc9087a3fd")
 	)
 	(no_connect
 		(at 162.0012 102.6922)
 		(uuid "70605cf1-8abe-41f5-bb84-7091461d9d1b")
+	)
+	(no_connect
+		(at 162.179 92.4306)
+		(uuid "8e7b2edb-ecb1-4e3a-a338-46d3ad551688")
 	)
 	(no_connect
 		(at 162.052 110.998)
@@ -2453,10 +2453,6 @@
 	(no_connect
 		(at 162.052 97.663)
 		(uuid "eef5a9c0-0c9f-4ac8-8648-d2eb51482149")
-	)
-	(no_connect
-		(at 125.6792 102.6922)
-		(uuid "fea6f03c-dc9d-4d27-8614-a5aeef039bb5")
 	)
 	(wire
 		(pts
@@ -3239,26 +3235,6 @@
 			)
 		)
 	)
-	(global_label "AIN1"
-		(shape output)
-		(at 125.73 97.663 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0b4597ec-ea3f-47ec-a89e-6f34f604f2b7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.73 97.663 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "AO1"
 		(shape input)
 		(at 49.53 33.02 90)
@@ -3277,6 +3253,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AIN2"
+		(shape output)
+		(at 125.6792 102.6922 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0ff1a476-451b-4fbc-8cf6-d87fd0000e4d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.6792 102.6922 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -3463,6 +3459,26 @@
 			)
 		)
 	)
+	(global_label "STDBY"
+		(shape output)
+		(at 125.73 97.663 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b08d50e-32d4-4778-b0fc-73d32e764d0e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.73 97.663 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "3V3"
 		(shape output)
 		(at 174.752 67.818 90)
@@ -3517,6 +3533,26 @@
 		(uuid "470e0647-6dc5-4d77-a2d3-24412381fdf8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 125.73 89.5096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AIN1"
+		(shape output)
+		(at 125.73 100.2538 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "48794fdc-c827-4370-80bf-65015ebb48c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125.73 100.2538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3866,26 +3902,6 @@
 			)
 		)
 	)
-	(global_label "AIN2"
-		(shape output)
-		(at 125.73 100.2538 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b24ec81f-71f8-4614-9261-00bd28f4b72f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.73 100.2538 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BIN2"
 		(shape output)
 		(at 125.857 92.4306 180)
@@ -4156,26 +4172,6 @@
 			)
 		)
 	)
-	(global_label "XSHUT_D"
-		(shape output)
-		(at 162.179 92.4306 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e07ed555-1016-4ce4-8e39-a307486035ec")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.179 92.4306 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "(2S){slash}3"
 		(shape output)
 		(at 62.23 158.75 0)
@@ -4220,7 +4216,7 @@
 			)
 		)
 	)
-	(global_label "3V3"
+	(global_label "STDBY"
 		(shape input)
 		(at 71.12 57.15 0)
 		(effects
@@ -4258,6 +4254,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "XSHUT_D"
+		(shape output)
+		(at 162.2552 77.9272 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fd5c87d6-702c-4fd6-93e9-2f36a7c28102")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.2552 77.9272 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
