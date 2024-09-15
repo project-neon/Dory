@@ -4555,7 +4555,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:Nidec_Copal_SH-7010C"
+		(property "Footprint" "esp32_devkit_v1_doit:Push_Button_6_pins"
 			(at 44.45 106.68 0)
 			(effects
 				(font
@@ -4637,7 +4637,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
 			(at 242.57 71.12 0)
 			(effects
 				(font
@@ -5185,7 +5185,7 @@
 				)
 			)
 		)
-		(property "Footprint" "esp32_devkit_v1_doit:esp32_devkit_v1_doit"
+		(property "Footprint" "esp32_devkit_v1_doit:esp32_with_headers"
 			(at 143.51 88.9 0)
 			(effects
 				(font
@@ -5406,7 +5406,7 @@
 				)
 			)
 		)
-		(property "Footprint" "esp32_devkit_v1_doit:H_Bridge"
+		(property "Footprint" "esp32_devkit_v1_doit:H_Bridge_with_headers"
 			(at 56.9468 55.6768 0)
 			(effects
 				(font
@@ -5719,7 +5719,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
 			(at 242.57 88.9 0)
 			(effects
 				(font
@@ -5868,7 +5868,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
 			(at 63.627 37.846 0)
 			(effects
 				(font
@@ -6280,7 +6280,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 72.644 106.68 0)
 			(effects
 				(font
@@ -6423,7 +6423,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical"
+		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
 			(at 49.53 38.1 0)
 			(effects
 				(font
