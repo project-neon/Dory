@@ -36,16 +36,16 @@ void motorsOutput() {
   // Quando estamos indo do Anti-Horário pro Horário (IN2 --> IN1), o 0 deve ser do canal IN2
 
   // Precisa passar pelo 0 sempre que muda de direção. O valor Mapped ainda tem guardado a velocidade do último loop nele.
-  if (velMotorR > 0 != velMotorRMapped > 0) ledcWrite((velMotorRMapped > 0) ? chRightIN1 : chRightIN2, 0);
-  if (velMotorL > 0 != velMotorLMapped >= 0) ledcWrite((velMotorLMapped > 0) ? chLeftIN1 : chLeftIN2, 0);
+  if (velMotorR > 0 != velMotorRMapped > 0) ledcWrite((velMotorRMapped > 0) ? chRightIN2 : chRightIN1, 0);
+  if (velMotorL > 0 != velMotorLMapped >= 0) ledcWrite((velMotorLMapped > 0) ? chLeftIN2 : chLeftIN1, 0);
 
   //Mapeia o valor da escala [-100, 100] para a escala do PWM
   velMotorRMapped = map(velMotorR, -100, 100, -totalBits, totalBits);
   velMotorLMapped = map(velMotorL, -100, 100, -totalBits, totalBits);
 
   //Envia para o motor o sinal PWM
-  ledcWrite((velMotorR > 0) ? chRightIN1 : chRightIN2, abs(velMotorRMapped));
-  ledcWrite((velMotorL > 0) ? chLeftIN1 : chLeftIN2, abs(velMotorLMapped));
+  ledcWrite((velMotorR > 0) ? chRightIN2 : chRightIN1, abs(velMotorRMapped));
+  ledcWrite((velMotorL > 0) ? chLeftIN2 : chLeftIN1, abs(velMotorLMapped));
 }
 
 void motorsPrintVel() {

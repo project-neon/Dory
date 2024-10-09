@@ -69,19 +69,19 @@ void readDistanceSensors0A41SK0FValues() {
 
 void distanceSensorVL53L0XInit() {
 
-  Wire.begin();  // Inicia o I2C
-  Wire.setClock(400000); //TODO: iniciar o Wire em uma funcao separada no setup do codigo
+  // Wire.begin();  // Inicia o I2C
+  // Wire.setClock(400000); //TODO: iniciar o Wire em uma funcao separada no setup do codigo
 
   // Desliga todos os sensores
-  for (int i = 0; i < 3; i++) {
+  for (int i = 0; i < 2; i++) {
     pinMode(VL53LOX_XSHUT_LIST_PINS[i], OUTPUT);
     digitalWrite(VL53LOX_XSHUT_LIST_PINS[i], LOW);
   }
 
   delay(10);
 
-  // Endereça todos os sensores
-  for (int i = 0; i < 3; i++) {
+  //Endereça todos os sensores
+  for (int i = 0; i < 2; i++) {
     pinMode(VL53LOX_XSHUT_LIST_PINS[i], INPUT); // XSHUT volta pra HIGH
     sensorsList[i]->init(); // Inicia o sensor usando a função da lib
     sensorsList[i]->setAddress(sensorsAddresses[i]); // Endereça o sensor

@@ -4,6 +4,7 @@
 bool isRunning = false;
 
 void IRJudgeControllerSensorInit() {
+  pinMode(LED_BUILTIN, INPUT);
   IrReceiver.begin(JUDGE_CONTROLLER_PIN, ENABLE_LED_FEEDBACK); // Inicializa teste do led e sensor do IR
 }
 
@@ -16,9 +17,6 @@ void checkSensorIR() {
       case 0x1:
       case 0x11:
         Serial.println("Apertou o botão 1");
-        digitalWrite(LED_BUILTIN, LOW);
-        delay(50);
-        digitalWrite(LED_BUILTIN, HIGH);
         break;
       // Inicializa a estratégia simples
       case 0x2:

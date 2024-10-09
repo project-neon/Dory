@@ -37,11 +37,11 @@ void setup() {
   motorsInit();
   Serial.println("Motores ON  ");
 
-  distanceSensorsInit();
-  Serial.println("Sensores Distancia ON  ");
-
   IRJudgeControllerSensorInit();
   Serial.println("Controle Remoto ON ");
+
+  distanceSensorsInit();
+  Serial.println("Sensores Distancia ON  ");
 
   Serial.println("Setup Terminado!!!");
   delay(500);
