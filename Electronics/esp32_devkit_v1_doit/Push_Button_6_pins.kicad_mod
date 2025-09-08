@@ -1,0 +1,333 @@
+(footprint "Push_Button_6_pins"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "4-bit rotary coded switch, through-hole, https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf")
+	(tags "rotary switch bcd")
+	(property "Reference" "REF**"
+		(at 3.2 -2.36 0)
+		(layer "F.SilkS")
+		(uuid "8bb5e939-b67e-4351-b939-a9da8619d70d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Push_Button_6_pins"
+		(at 3.81 7.44 0)
+		(layer "F.Fab")
+		(uuid "7e743e19-ef41-4dc6-b2be-d4d76e4875f0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0963072c-3341-49b9-ac38-dee9d20b7931")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5ccf37c9-2094-481b-9159-9f45933feab0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "512beb45-419b-4485-afc7-634050e62659")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.42 -1.48)
+		(end -0.05 -1.48)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "89e6f1ce-68e3-4865-a756-e262d3dccbd1")
+	)
+	(fp_line
+		(start -1.42 -0.11)
+		(end -1.42 -1.48)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b99bf048-b6db-4a6d-a4fe-2bad7ea434da")
+	)
+	(fp_line
+		(start 0 1.0725)
+		(end 0 0.9275)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd036100-8ab5-42a0-82c0-041cd48b1253")
+	)
+	(fp_line
+		(start 0 3.0725)
+		(end 0 2.9275)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5931bd08-876e-4a37-b4fa-07cd5e4f7167")
+	)
+	(fp_line
+		(start 0 5.02)
+		(end 0 5.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d61a1618-3c19-48a3-a956-9b12d8ff423c")
+	)
+	(fp_line
+		(start 0 5.1)
+		(end 6 5.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2320823e-a1a2-4be0-8c2f-7aeba3dab53b")
+	)
+	(fp_line
+		(start 0.14 -1.23)
+		(end 6 -1.23)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f66049be-68a3-4b04-ba94-40c928249b45")
+	)
+	(fp_line
+		(start 0.14 -1.15)
+		(end 0.14 -1.23)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "35d103f3-a8da-450f-8938-0ffb04e90a24")
+	)
+	(fp_line
+		(start 6 -1.2)
+		(end 6 -1.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8667ef4d-ec6d-4719-b390-925641d0873f")
+	)
+	(fp_line
+		(start 6 1.0725)
+		(end 6 0.9275)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f27c49e2-0c8a-4c22-bfdb-ef7e0ee68ea8")
+	)
+	(fp_line
+		(start 6 3.0725)
+		(end 6 2.9275)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a7b48ef2-530d-4818-bf67-e957d06fdb5d")
+	)
+	(fp_line
+		(start 6 5.1)
+		(end 6 5.02)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "67b18b8e-ef26-4ebf-8ddc-a3dd809d4973")
+	)
+	(fp_line
+		(start -1.3 -1.36)
+		(end -1.3 5.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d4f4d258-73e7-4507-990c-a703a95191dc")
+	)
+	(fp_line
+		(start -1.3 5.5)
+		(end 7.3 5.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "cd515f7a-fce6-4cc0-af60-7f5d6b7417ef")
+	)
+	(fp_line
+		(start 7.3 -1.36)
+		(end -1.3 -1.36)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7292c452-fa92-413a-b5e5-90397a392c0b")
+	)
+	(fp_line
+		(start 7.3 5.5)
+		(end 7.3 -1.36)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3f81ab12-8c79-4d93-9641-cc230e776752")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.6 -2.9 0)
+		(layer "F.Fab")
+		(uuid "9c527bb6-e4f1-4edc-b459-c99d9c8eff2f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(dimension
+		(type aligned)
+		(layer "F.Fab")
+		(uuid "a857ecd0-b7bb-4521-9488-56a0bdbb9cb8")
+		(pts
+			(xy 0 0) (xy 6 0)
+		)
+		(height -4.2)
+		(gr_text "6.0000 mm"
+			(at 3 -5.35 0)
+			(layer "F.Fab")
+			(uuid "a857ecd0-b7bb-4521-9488-56a0bdbb9cb8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9296bb9d-4680-4f81-9a69-a8230bf65286")
+	)
+	(pad "2" thru_hole oval
+		(at 6 4)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "efe8ce3a-ea14-4733-926e-b210d7790e02")
+	)
+	(pad "4" thru_hole oval
+		(at 0 4)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "d58220d7-0a54-4fe3-8e95-717de3a2390f")
+	)
+	(pad "8" thru_hole oval
+		(at 6 0)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "185cc7f9-5b02-42b5-a412-594bd3dbaf2f")
+	)
+	(pad "C" thru_hole oval
+		(at 0 2)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "192df37d-2e0f-495f-af8b-22054cc6f426")
+	)
+	(pad "C" thru_hole oval
+		(at 6 2)
+		(size 2 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0ef122db-905c-4fc4-ab51-2745b7d46069")
+	)
+	(model "C:/Users/Lucas Moreira/Documents/Fusion 360/arquivos-steps/Push_button_6_pins.step"
+		(offset
+			(xyz 3 -2 3.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+)
